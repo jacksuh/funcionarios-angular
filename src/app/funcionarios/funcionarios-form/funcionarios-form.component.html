@@ -34,10 +34,10 @@
                     <label>Descrição:</label>
                     <select class="form-control" 
                         [ngModelOptions]="{standalone: true}"
-                        [(ngModel)]="funcionario.idDescricao">
+                        [(ngModel)]="funcionario.especialidadeDto">
                         <option value="">Selecione</option>
                         <option *ngFor="let especialidade of especialidades" [ngValue]="especialidade.id">
-                            {{especialidade.descricao}}
+                            {{ especialidade.descricao }}
                         </option>
                     </select>
                 </div>

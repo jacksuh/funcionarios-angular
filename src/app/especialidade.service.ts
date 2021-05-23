@@ -12,6 +12,6 @@ export class EspecialidadeService {
 
 
   getEspecialidades(): Observable<any[]>{
-    return this.http.get<Especialidade[]>('http://localhost:8080/especialidade');
+    return this.http.get<Especialidade[]>('http://localhost:8080/api/especialidade');
   }
 }

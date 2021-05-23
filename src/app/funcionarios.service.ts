@@ -13,24 +13,24 @@ export class FuncionariosService {
    }
 
    salvar(funcionario: Funcionario) : Observable<any>{
-    return this.http.post<Funcionario>('http://localhost:8080/funcionario',funcionario);
+    return this.http.post<Funcionario>('http://localhost:8080/api/funcionario',funcionario);
    }
 
    atualizar(funcionario: Funcionario) : Observable<Funcionario>{
-    return this.http.put<Funcionario>(`http://localhost:8080/funcionario/${funcionario.id}`, funcionario);
+    return this.http.put<Funcionario>(`http://localhost:8080/api/funcionario/${funcionario.id}`, funcionario);
    }
 
    getFuncionarios(): Observable<any[]>{
-     return this.http.get<Funcionario[]>('http://localhost:8080/funcionario');
+     return this.http.get<Funcionario[]>('http://localhost:8080/api/funcionario');
    }
 
    getFuncionarioById(id: number) : Observable<Funcionario>{
-    return this.http.get<Funcionario>(`http://localhost:8080/funcionario/${id}`);
+    return this.http.get<Funcionario>(`http://localhost:8080/api/funcionario/${id}`);
 
    }
 
    deletar(funcionario: Funcionario): Observable<any>{
-     return this.http.delete<any>(`http://localhost:8080/funcionario/${funcionario.id}`);
+     return this.http.delete<any>(`http://localhost:8080/api/funcionario/${funcionario.id}`);
    }
   
 
